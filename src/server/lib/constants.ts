@@ -1,0 +1,9 @@
+export const MAX_TWEET_LENGTH = 280;
+export const MAX_IMAGES = 4;
+export const MAX_VIDEO = 1;
+export const MAX_FILE_SIZE_MB = 5; // 5MB per image
+export const MAX_VIDEO_SIZE_MB = 15; // 15MB for video
+export const COST_PER_MENFESS = 1; // 1 coin per submission
+export const DEFAULT_COOLDOWN_MINUTES = 15;
+export const MAX_RETRY_COUNT = 3;
+export const QUEUE_PROCESS_INTERVAL_MS = 60 * 1000; // 1 minute

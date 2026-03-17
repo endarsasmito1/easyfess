@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { Providers } from "@/components/Providers";
+
 export default function RootLayout({
   children,
 }: {
@@ -29,22 +31,24 @@ export default function RootLayout({
   return (
     <html lang="id" className={inter.variable}>
       <body>
-        <TRPCProvider>
-          {children}
-          <Toaster
-            theme="dark"
-            position="top-right"
-            richColors
-            closeButton
-            toastOptions={{
-              style: {
-                background: "var(--color-bg-card)",
-                border: "1px solid var(--color-border)",
-                color: "var(--color-text-primary)",
-              },
-            }}
-          />
-        </TRPCProvider>
+        <Providers>
+          <TRPCProvider>
+            {children}
+            <Toaster
+              theme="dark"
+              position="top-right"
+              richColors
+              closeButton
+              toastOptions={{
+                style: {
+                  background: "var(--color-bg-card)",
+                  border: "1px solid var(--color-border)",
+                  color: "var(--color-text-primary)",
+                },
+              }}
+            />
+          </TRPCProvider>
+        </Providers>
       </body>
     </html>
   );
